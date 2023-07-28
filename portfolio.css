@@ -1,0 +1,15 @@
+body {
+display: flex;
+flex-direction: column;
+}
+header {
+ display: flex;
+ justify-content: space-between;
+ 
+ background-color: rgb(23, 23, 101);
+ color: white;
+}
+.myImage {
+ height: 300px;
+ width: 250px;
+}
