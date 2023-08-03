@@ -4,6 +4,8 @@ var currentQuestion = 0;
 var time = document.getElementById("timer");
 let timeCounter;
 let timeerInterval;
+var results = document.getElementById("results");
+var submit = document.getElementById("submit");
 
 document.getElementById("startQuiz").addEventListener("click", function () {
   document.getElementById("quiz-intro").style.display = "none";
@@ -12,6 +14,45 @@ document.getElementById("startQuiz").addEventListener("click", function () {
   startTimer(20);
 });
 
+submit.addEventListener("click", function (event) {
+  event.preventDefault();
+  let scores = localStorage.getItem("scores");
+  var score = {
+    name: document.getElementById("name").value,
+    score: timeCounter,
+  };
+
+  if (scores == null) {
+    localStorage.setItem("scores", JSON.stringify([score]));
+  } else {
+    let temp = JSON.parse(scores);
+    temp.push(score);
+    temp.sort(function (a, b) {
+      if (a.score > b.score) {
+        return -1;
+      }
+
+      if (b.score > a.score) {
+        return 1;
+      }
+
+      return 0;
+    });
+    localStorage.setItem("scores", JSON.stringify(temp));
+  }
+
+  //localStorage.setItem("scores", JSON.//stringify(score));
+});
+
+var endQuiz = function () {
+  answers.style.display = "none";
+  results.style.display = "block";
+  document.getElementById("quiz-results").textContent =
+    "You scored " + timeCounter + " points!";
+  clearInterval(timeerInterval);
+  time.style.display = "none";
+};
+
 var startTimer = function (runTime) {
   timeCounter = runTime;
   time.textContent = timeCounter;
@@ -19,8 +60,7 @@ var startTimer = function (runTime) {
     timeCounter--;
     time.textContent = timeCounter;
     if (timeCounter == 0) {
-      //end game logic
-      clearInterval(timeerInterval);
+      endQuiz();
     }
   }, 1000);
 };
@@ -34,6 +74,10 @@ answers.addEventListener("click", function (event) {
     } else {
       console.log("wrong");
       timeCounter -= 10;
+      if (timeCounter <= 0) {
+        timeCounter = 0;
+        endQuiz();
+      }
     }
     renderNextQuestion();
   }
@@ -45,9 +89,7 @@ const renderNextQuestion = function () {
   if (currentQuestion != questionsArray.length) {
     renderQuestion(currentQuestion);
   } else {
-    localStorage.setItem("Score", timeCounter);
-    clearInterval(timeerInterval);
-    //Show Results screen
+    endQuiz();
   }
 };
 
