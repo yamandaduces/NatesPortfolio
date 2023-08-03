@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Quiz</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="timer"></div>
+    <div class="card" id="quiz-intro">
+      <h1>Just A Quiz</h1>
+      <h2>
+        Test your knowledge of whatever I choose with this quiz! Three questions
+        I came up with myself to test your knowledge of certain topics I chose!
+      </h2>
+      <button id="startQuiz">Start Quiz</button>
+    </div>
+    <div id="answers" class="card hide"></div>
+    <div id="results" class="card hide">
+      <h2>Finished</h2>
+      <p id="quiz-results"></p>
+      <form>
+        <input type="text" id="name" name="aName" />
+        <button id="submit">Submit</button>
+      </form>
+    </div>
+
+    <script src="./script.js" async defer></script>
+  </body>
+</html>
