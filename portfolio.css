@@ -1,15 +1,31 @@
+:root{
+ --main-color: #0971F1;
+ --navbar-color: #022BDB;
+ --textColor: white;
+}
+
 body {
 display: flex;
 flex-direction: column;
-}
-header {
- display: flex;
- justify-content: space-between;
- 
- background-color: rgb(23, 23, 101);
- color: white;
+background-image: url(./smokey-blue.jpg);
+background-size: 100% 100%;
+background-repeat: no-repeat;
+background-attachment: fixed;
 }
 .myImage {
  height: 300px;
  width: 250px;
+}
+.image {
+ height: 200px;
+ width: 300px;
+}
+.custom-navbar{
+ background-color: var(--navbar-color);
+}
+.aboutMe {
+ background-color: var(--main-color);
+}
+.textColor{
+color: var(--textColor)
 }
