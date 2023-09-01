@@ -1,0 +1,32 @@
+.custom-carousel {
+ background-color: black;
+ height: 500px;
+}
+.carousel-item {
+ height: 500px;
+}
+.carousel-img {
+ max-height: 350px;
+ width: 100%;
+}
+.carousel-caption {
+ bottom: 0;
+ padding-bottom: 0;
+}
+.carousel {
+ max-width: 800px;
+ margin: 20px auto;
+}
+body {
+ background-color: black;
+}
+.carousel-buttons {
+ align-items: flex-end;
+ padding-bottom: 40px;
+}
+.title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}

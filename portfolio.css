@@ -2,6 +2,9 @@
  --main-color: #0971F1;
  --navbar-color: #022BDB;
  --textColor: white;
+ --title-font: "Sedgwick Ave Display";
+ --second-font: "Rock Salt";
+ --mainFont: "Kreon";
 }
 
 body {
@@ -11,6 +14,17 @@ background-image: url(./smokey-blue.jpg);
 background-size: 100% 100%;
 background-repeat: no-repeat;
 background-attachment: fixed;
+}
+.titleFont {
+ font-family: var(--title-font), sans-serif;
+ font-size: x-large;
+}
+.secondFont {
+ font-family: var(--second-font),serif;
+ font-size: small;
+}
+.mainFont {
+ font-family: var(--mainFont), monospace;
 }
 .myImage {
  height: 300px;
@@ -28,4 +42,17 @@ background-attachment: fixed;
 }
 .textColor{
 color: var(--textColor)
+}
+.custom-card {
+ gap: 10px;
+}
+.custom-card h5{
+flex: 0 0 100%;
+}
+.custom-card img {
+ flex: 0 1 30%;
+ max-width: 300px;
+}
+.custom-card p {
+ flex: 1 1 50%;
 }

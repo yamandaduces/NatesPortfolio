@@ -3,7 +3,12 @@
   <head>
     <title>Nathaniel Kloss' Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Rock+Salt">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Kreon">      
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./portfolio.css" />
   </head>
@@ -15,10 +20,10 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">My Portfolio</a>
+    <a class="navbar-brand titleFont">My Portfolio</a>
     <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title textColor" id="offcanvasNavbarLabel">Areas Around My Page</h5>
+        <h5 class="offcanvas-title textColor titleFont" id="offcanvasNavbarLabel">Areas Around My Page</h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
@@ -31,17 +36,15 @@
               Different Projects
             </a>
             <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-              <li><a class="dropdown-item" href="#">Password Generator</a></li>
+              <li><a class="dropdown-item" href="./password/index.html">Password Generator</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">A Quiz</a></li>
+              <li><a class="dropdown-item" href="./quiz/index.html">A Quiz</a></li>
             </ul>
           </li>
         </ul>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-primary" type="submit">Search</button>
         </form>
       </div>
     </div>
@@ -54,12 +57,13 @@
       <section class="container pt-5 mt-5">
         <article>
           <div class="card text-white bg-dark">
-  <div class="card-header aboutMe">
+  <div class="card-header aboutMe titleFont">
     About Me
   </div>
-  <div class="card-body">
-    <h5 class="card-title">Nathaniel Kloss</h5>
-    <p class="card-text">First off, welcome! This is my first official website! Now let's get
+  <div class="card-body d-flex flex-wrap custom-card">
+    <h5 class="card-title secondFont">Nathaniel Kloss</h5>
+    <img class="myImage" src="./IMG_1486.JPG" />
+    <p class="card-text mainFont">First off, welcome! This is my first official website! Now let's get
             you to know me a little, I am a fresh highschool graduate that is
             hoping to get into Durham Technical Community College. I love music,
             art, spending time with those I value, long boarding, playing video
@@ -73,27 +77,27 @@
             figure, kind, smart, dedicated, hard working, and unbreakable. As
             time goes on I hope to gain more experience, graduate from college
             and be able to live comfortably.</p>
-    <img class="myImage" src="./IMG_1486.JPG" />
+    
   </div>
 </div>
 <div class="text-white bg-dark row mt-4">
-  <div class="card-header aboutMe col-12">
+  <div class="card-header aboutMe titleFont col-12">
     Projects
   </div>
     <div class="row p-4">
       <div class="card bg-dark col-12 col-md-6">
         <img src="./passwordGenerator.jpg" class="card-img-top">
         <div class="card-body">
-          <h5 class="card-title">Password Generator</h5>
-          <p class="card-text">This is exactly what I claim it to be, a password generator that will take in a users input of how many characters they wish to use, what numbers they want to use, whether ornot they want capitol or lower case letters and if they want symbols.</p>
+          <h5 class="card-title secondFont">Password Generator</h5>
+          <p class="card-text mainFont">This is exactly what I claim it to be, a password generator that will take in a users input of how many characters they wish to use, what numbers they want to use, whether ornot they want capitol or lower case letters and if they want symbols.</p>
           <a href="./password/index.html" class="btn btn-primary">Go To Password Generator</a>
         </div>
       </div>
       <div class="card bg-dark col-12 col-md-6">
         <img src="./Quiz.jpg" class="card-img-top">
         <div class="card-body">
-          <h5 class="card-title">Password Generator</h5>
-          <p class="card-text">I had made this to test my skills, it is a small quiz with few questions, however  could make more if I wish to do so. The questions genre also varies.</p>
+          <h5 class="card-title secondFont">A Quiz</h5>
+          <p class="card-text mainFont">I had made this to test my skills, it is a small quiz with few questions, however  could make more if I wish to do so. The questions genre also varies.</p>
           <a href="./quiz/index.html" class="btn btn-primary">Go To The Quiz</a>
       </div>
     </div>
