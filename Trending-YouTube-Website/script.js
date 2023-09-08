@@ -2285,7 +2285,7 @@ let generateCarousel = function(type){
          <img class="carousel-img" src="${thumbnail}"/>
           <div class="carousel-caption d-md-block">
             <h5 class="title"><a href="${link}">${title}</a></h5>
-            <p>${description}</p>
+            <p class="descriptionFont">${description}</p>
          </div>
        </div>`;
         $(".carousel-inner").append(markup);

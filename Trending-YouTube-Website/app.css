@@ -30,3 +30,14 @@ body {
     text-overflow: ellipsis;
     display: block;
 }
+:root {
+ --titleFont: "Pathway Gothic One";
+ --descriptionFont: "Inter"
+}
+
+.titleFont {
+ font-family: var(--titleFont);
+}
+.descriptionFont {
+ font-family: var(--descriptionFont);
+}
